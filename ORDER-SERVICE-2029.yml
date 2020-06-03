@@ -18,4 +18,12 @@ eureka:
   instance:
     hostname: localhost
   
-order.service.dopayment=http://PAYMENT-SERVICE-2030/payment-service/doPayment
+microservice:
+  payment-service:
+    endpoints:
+      endpoint:
+        uri: http://PAYMENT-SERVICE-2030/payment-service/doPayment
+  order-service:
+    endpoints:
+      endpoint:
+        uri: http://ORDER-SERVICE-2029/order-service/bookOrder
